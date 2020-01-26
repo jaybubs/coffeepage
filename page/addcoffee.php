@@ -1,7 +1,7 @@
 <?php
 if (isset($_POST['name'])) {
 	try {
-		$pdo = new PDO('mysql:host=localhost;dbname=cofdb;charset=utf8','chicken','kokoko');
+		$pdo = new PDO('mysql:host=mariadb;dbname=cofdb;charset=utf8','chicken','kokoko');
 		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 		$sql = 'INSERT INTO `beans` SET
 			`name` = :name,
